@@ -1,4 +1,5 @@
 import inquirer from "inquirer";
+import chalk from "chalk";
 let todos = [];
 let condition = true;
 while (condition) {
@@ -22,6 +23,8 @@ while (condition) {
         }
     ]);
     todos.push(todoQuestions.firstQuestion);
-    console.log(todos);
+    console.log(chalk.yellow(todos));
+    console.log(chalk.green("Todo added successfully!"));
+    console.log(chalk.blue("Current todos:"), todos);
     condition = todoQuestions.secondQuestion;
 }
